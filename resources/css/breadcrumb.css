@@ -8,7 +8,27 @@
     display: inline;
 }
 
-/* Add a character of your choosing with CSS to separate the breadcrumbs. This is typically a > or /. */
+/* Add a character of your choosing with CSS to separate the breadcrumbs. This is typically a > or /. 
 .breadcrumb li+li::before {
     content: "> ";
+}
+*/
+
+/*Update the CSS so that there is no longer a breadcrumb denoting symbol between “Blueberries” and “Organic”*/
+.breadcrumb li.location+li.location::before {
+    content: "> ";
+}
+
+/*Style the attribute breadcrumb to make it obvious that it is an attribute. Try changing the color or setting ::after content to make a “close” notation.
+
+This will make it obvious to the user that they can interact with it in a different way from the location breadcrumbs.*/
+.attribute{
+    color: gray;
+}
+
+.breadcrumb li.attribute::after {
+    content: "x";
+    color: red;
+    font-size: 10px;
+    vertical-align: super;
 }
