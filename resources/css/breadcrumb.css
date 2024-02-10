@@ -1,0 +1,14 @@
+.breadcrumb {
+    margin-bottom: .5%;
+    margin-top: .5%
+}
+
+/*adjust the CSS in breadcrumb.css so the breadcrumb (class = breadcrumb) list elements display inline.*/
+.breadcrumb > li {
+    display: inline;
+}
+
+/* Add a character of your choosing with CSS to separate the breadcrumbs. This is typically a > or /. */
+.breadcrumb li+li::before {
+    content: "> ";
+}
